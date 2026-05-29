@@ -87,7 +87,7 @@
         "alternateName": "Glorious Scholars Schools",
         "description": "Where every child is a genius. Qualitative and affordable education from Crèche to Primary 5.",
         "url": "https://gloriousscholars.acad.com.ng/",
-        "logo": "https://gloriousscholars.acad.com.ng/logo.png",
+        "logo": "https://gloriousscholars.acad.com.ng/images/logo.png",
         "image": "https://gloriousscholars.acad.com.ng/images/school-building.jpg",
         "foundingDate": "2023",
         "foundingLocation": "Nigeria",
@@ -162,7 +162,7 @@
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Glorious Scholars Academy",
-        "image": "https://gloriousscholars.acad.com.ng/logo.png",
+        "image": "https://gloriousscholars.acad.com.ng/images/logo.png",
         "priceRange": "₦",
         "telephone": "+2348026944961",
         "email": "gloriousscholars@gmail.com@gmail.com",
@@ -347,28 +347,35 @@
             transition: 0.2s;
         }
 
-        /* HERO */
         .hero {
-            position: relative;
-            min-height: 90vh;
-            background: linear-gradient(105deg, #0A1F44 0%, #112B4F 100%);
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-        }
-        .hero-bg-shape {
-            position: absolute;
-            inset: 0;
-            background: url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=1600&q=80') center/cover no-repeat;
-            opacity: 0.12;
-            mix-blend-mode: overlay;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 700px;
-            padding: 60px 32px;
-        }
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg-shape {
+    position: absolute;
+    inset: 0;
+    background: url('images/school-building.jpg') center/cover no-repeat;
+    filter: brightness(0.65);
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(10,31,68,0.85) 0%, rgba(5,16,43,0.75) 100%);
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 700px;
+    padding: 60px 32px;
+}
         .hero-badge {
             display: inline-block;
             background: rgba(201, 160, 61, 0.18);
@@ -698,6 +705,33 @@
         .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
         .reveal.visible { opacity: 1; transform: translateY(0); }
         .btn-icon { display: inline-flex; gap: 8px; align-items: center; }
+
+        .leader-img {
+    height: 280px;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.leader-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers area without distortion */
+    object-position: center 20%; /* Adjusts vertical focus (20% from top) */
+    transition: transform 0.4s ease;
+}
+
+/* For images that are too wide */
+.leader-img img.contain {
+    object-fit: contain;
+    background: var(--gray-light);
+}
+
+.leader-card:hover .leader-img img {
+    transform: scale(1.05);
+}
     </style>
 </head>
 
@@ -725,7 +759,7 @@
         <div class="nav-wrapper">
             <a href="#" class="logo">
                 <div class="logo-icon">
-    <img src="logo.png" alt="Glorious Scholars Academy Logo" style="width: 48px; height: 48px; object-fit: contain; border-radius: 50%;">
+    <img src="images/logo.png" alt="Glorious Scholars Academy Logo" style="width: 48px; height: 48px; object-fit: contain; border-radius: 50%;">
 </div>
                 <div class="logo-text">
                     <div class="logo-name">Glorious Scholars</div>
@@ -745,19 +779,21 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-bg-shape"></div>
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge"><i class="fas fa-chalkboard-user"></i> Since 2009 • Excellence & Godliness</div>
-                <h1 class="hero-title">Shaping Lives,<br>Building <span>Glorious</span> Futures</h1>
-                <p class="hero-subtitle">Glorious Scholars Academy — Where academic excellence meets moral discipline and modern ICT education from Creche to Senior Secondary.</p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn btn-gold"><i class="fas fa-pen-fancy"></i> Enroll Your Child</a>
-                    <a href="#about" class="btn btn-outline-white">Discover Our Story</a>
-                </div>
+    <div class="hero-bg-shape"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-badge"><i class="fas fa-chalkboard-user"></i> Since 2009 • Excellence & Godliness</div>
+            <h1 class="hero-title">Shaping Lives,<br>Building <span>Glorious</span> Futures</h1>
+            <p class="hero-subtitle">Glorious Scholars Academy — Where academic excellence meets moral discipline and modern ICT education from Creche to Senior Secondary.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-gold"><i class="fas fa-pen-fancy"></i> Enroll Your Child</a>
+                <a href="#about" class="btn btn-outline-white">Discover Our Story</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+</section>
 
     <!-- Stats Strip -->
     <div class="stats-strip">
@@ -807,10 +843,37 @@
             <span class="section-label">Our Leadership</span>
             <h2 class="section-title">Dedicated Educators,<br>Committed to Shaping Lives</h2>
             <div class="leaders-grid reveal">
-                <div class="leader-card"><div class="leader-img"><i class="fas fa-crown fa-4x"></i></div><div class="leader-info"><h3 class="leader-name">Pastor (Mrs) Mary Olufunmilayo Afere</h3><div class="leader-title">Founder</div><p class="leader-bio">Visionary educator and servant leader with over 20 years of experience in Christian education. Passionate about raising a generation of godly scholars.</p></div></div>
-                <div class="leader-card"><div class="leader-img"><i class="fas fa-chalkboard-user fa-4x"></i></div><div class="leader-info"><h3 class="leader-name">Mrs Morenike Adebiyi</h3><div class="leader-title">Principal</div><p class="leader-bio">Educational administrator dedicated to academic excellence and staff development. Oversees holistic student growth and curriculum delivery.</p></div></div>
-                <div class="leader-card"><div class="leader-img"><i class="fas fa-users fa-4x"></i></div><div class="leader-info"><h3 class="leader-name">Mr Olanrewaju Dotun</h3><div class="leader-title">Vice Principal</div><p class="leader-bio">Discipline, student affairs, and extracurriculars expert. Promotes a culture of excellence in sports and clubs.</p></div></div>
-            </div>
+    <div class="leader-card">
+        <div class="leader-img">
+            <img src="images/mary-afere.png" alt="Pastor Mrs Mary Olufunmilayo Afere - Founder">
+        </div>
+        <div class="leader-info">
+            <h3 class="leader-name">Pastor (Mrs) Mary Olufunmilayo Afere</h3>
+            <div class="leader-title">Founder</div>
+            <p class="leader-bio">Visionary educator and servant leader with over 20 years of experience in Christian education. Passionate about raising a generation of godly scholars.</p>
+        </div>
+    </div>
+    <div class="leader-card">
+        <div class="leader-img">
+            <img src="images/leadership/morenike-adebiyi.jpg" alt="Mrs Morenike Adebiyi - Principal">
+        </div>
+        <div class="leader-info">
+            <h3 class="leader-name">Mrs Morenike Adebiyi</h3>
+            <div class="leader-title">Principal</div>
+            <p class="leader-bio">Educational administrator dedicated to academic excellence and staff development. Oversees holistic student growth and curriculum delivery.</p>
+        </div>
+    </div>
+    <div class="leader-card">
+        <div class="leader-img">
+            <img src="images/leadership/olanrewaju-dotun.jpg" alt="Mr Olanrewaju Dotun - Vice Principal">
+        </div>
+        <div class="leader-info">
+            <h3 class="leader-name">Mr Olanrewaju Dotun</h3>
+            <div class="leader-title">Vice Principal</div>
+            <p class="leader-bio">Discipline, student affairs, and extracurriculars expert. Promotes a culture of excellence in sports and clubs.</p>
+        </div>
+    </div>
+</div>
         </div>
     </section>
 
