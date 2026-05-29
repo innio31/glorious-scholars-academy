@@ -1,894 +1,601 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glorious Scholars Academy – Shaping Lives</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    :root {
-      --red:    #CC1414;
-      --red-dk: #991010;
-      --gold:   #E8C42A;
-      --black:  #111111;
-      --white:  #FFFFFF;
-      --off:    #F8F5F0;
-      --gray:   #555555;
-    }
+    <!-- Title & Description - Optimized SEO -->
+    <title>Glorious Scholars Academy | Shaping Lives – Christ-Centred School Sango-Ota</title>
+    <meta name="description"
+        content="Glorious Scholars Academy – Christian school in Sango-Ota, Ogun State. Quality education from Crèche to Senior Secondary. God-fearing values, academic excellence, and character building. Enrol now!">
+    <meta name="keywords"
+        content="Glorious Scholars Academy, Christian school Ogun State, Sango-Ota school, best nursery and primary school, secondary school Nigeria, Christ-centred education, academic excellence, JET competition awards">
+    <meta name="author" content="Glorious Scholars Academy">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="theme-color" content="#CC1414">
 
-    html { scroll-behavior: smooth; }
+    <!-- Favicon set (multiple sizes for full compatibility) -->
+    <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
-    body {
-      font-family: 'Nunito', sans-serif;
-      color: var(--black);
-      background: var(--off);
-      overflow-x: hidden;
-    }
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gloriousscholars.acad.com.ng/">
+    <meta property="og:title" content="Glorious Scholars Academy | Shaping Lives – Excellence & Faith">
+    <meta property="og:description"
+        content="Christ-centred school in Sango-Ota. Crèche, Nursery, Primary & Secondary. Academic excellence, God-fearing values, and character development. Enrol today!">
+    <meta property="og:image" content="https://gloriousscholars.acad.com.ng/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_NG">
+    <meta property="og:site_name" content="Glorious Scholars Academy">
 
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 5%;
-      height: 70px;
-      background: rgba(17,17,17,.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 2px solid var(--red);
-    }
-    .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .nav-logo img, .nav-logo .logo-badge {
-      width: 46px; height: 46px; border-radius: 50%; object-fit: cover;
-      border: 2px solid var(--gold);
-    }
-    .logo-badge {
-      background: var(--white); display: flex; align-items: center; justify-content: center;
-      font-size: 11px; font-weight: 900; color: var(--black); text-align: center;
-      line-height: 1.1; letter-spacing: -.3px;
-    }
-    .nav-name { color: var(--white); font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; }
-    .nav-links { display: flex; gap: 28px; list-style: none; }
-    .nav-links a { color: #ccc; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-cta {
-      background: var(--red); color: var(--white); border: none; padding: 10px 22px;
-      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 13px;
-      border-radius: 4px; cursor: pointer; text-transform: uppercase; letter-spacing: .5px;
-      transition: background .2s;
-    }
-    .nav-cta:hover { background: var(--red-dk); }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
-    .hamburger span { width: 25px; height: 2px; background: var(--white); display: block; }
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Glorious Scholars Academy | Shaping Lives">
+    <meta name="twitter:description"
+        content="Quality Christ-centred education from Crèche to Senior Secondary. Academic excellence, moral discipline, and God-fearing values in Sango-Ota.">
+    <meta name="twitter:image" content="https://gloriousscholars.acad.com.ng/images/twitter-image.jpg">
 
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      background: var(--black);
-      display: grid; grid-template-columns: 1fr 1fr; align-items: center;
-      padding: 100px 5% 60px;
-      position: relative; overflow: hidden;
-    }
-    .hero-bg-pattern {
-      position: absolute; inset: 0; opacity: .04;
-      background-image: repeating-linear-gradient(
-        45deg, var(--red) 0, var(--red) 1px, transparent 0, transparent 50%
-      );
-      background-size: 30px 30px;
-    }
-    .hero-red-bar {
-      position: absolute; left: 0; top: 0; bottom: 0; width: 6px;
-      background: linear-gradient(180deg, var(--gold), var(--red));
-    }
-    .hero-content { position: relative; z-index: 2; }
-    .hero-badge {
-      display: inline-block;
-      background: var(--red); color: var(--white);
-      font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;
-      padding: 5px 16px; border-radius: 2px; margin-bottom: 22px;
-    }
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 5vw, 68px);
-      font-weight: 900; line-height: 1.1;
-      color: var(--white);
-      margin-bottom: 10px;
-    }
-    .hero-title em { color: var(--gold); font-style: normal; }
-    .hero-motto {
-      font-size: clamp(14px, 2vw, 20px); font-weight: 700;
-      color: var(--red); letter-spacing: 3px; text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-    .hero-desc {
-      color: #aaa; font-size: 16px; line-height: 1.7; max-width: 480px; margin-bottom: 36px;
-    }
-    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn-primary {
-      background: var(--red); color: var(--white); padding: 14px 32px;
-      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px;
-      border: none; border-radius: 4px; cursor: pointer; text-decoration: none;
-      letter-spacing: .5px; transition: background .2s, transform .15s;
-      display: inline-block;
-    }
-    .btn-primary:hover { background: var(--red-dk); transform: translateY(-2px); }
-    .btn-outline {
-      background: transparent; color: var(--gold); padding: 14px 32px;
-      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 14px;
-      border: 2px solid var(--gold); border-radius: 4px; cursor: pointer; text-decoration: none;
-      letter-spacing: .5px; transition: all .2s; display: inline-block;
-    }
-    .btn-outline:hover { background: var(--gold); color: var(--black); transform: translateY(-2px); }
-    .hero-visual {
-      position: relative; z-index: 2; display: flex; align-items: center; justify-content: center;
-    }
-    .logo-ring {
-      width: clamp(260px, 30vw, 420px);
-      height: clamp(260px, 30vw, 420px);
-      border-radius: 50%;
-      border: 4px solid var(--red);
-      box-shadow: 0 0 0 12px rgba(204,20,20,.1), 0 0 60px rgba(204,20,20,.3);
-      display: flex; align-items: center; justify-content: center;
-      background: var(--white);
-      animation: pulseRing 3s ease-in-out infinite;
-    }
-    .logo-ring img { width: 90%; height: 90%; object-fit: contain; border-radius: 50%; }
-    .logo-ring-placeholder {
-      width: 90%; height: 90%; border-radius: 50%; background: var(--white);
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center; padding: 20px;
-    }
-    .logo-ring-placeholder .school-abbr {
-      font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 900;
-      color: var(--black); line-height: 1;
-    }
-    .logo-ring-placeholder .school-full {
-      font-size: 10px; font-weight: 800; letter-spacing: 1px;
-      text-transform: uppercase; color: var(--red); margin-top: 6px;
-    }
-    @keyframes pulseRing {
-      0%, 100% { box-shadow: 0 0 0 12px rgba(204,20,20,.1), 0 0 60px rgba(204,20,20,.3); }
-      50% { box-shadow: 0 0 0 20px rgba(204,20,20,.05), 0 0 80px rgba(204,20,20,.4); }
-    }
-    .hero-stats {
-      display: flex; gap: 32px; margin-top: 48px; flex-wrap: wrap;
-    }
-    .stat { border-left: 3px solid var(--red); padding-left: 14px; }
-    .stat-num { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; color: var(--gold); }
-    .stat-label { font-size: 12px; font-weight: 700; color: #888; text-transform: uppercase; letter-spacing: .5px; }
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gloriousscholars.acad.com.ng/">
 
-    /* ── MARQUEE ── */
-    .marquee-bar {
-      background: var(--red); color: var(--white);
-      padding: 14px 0; overflow: hidden; white-space: nowrap;
-    }
-    .marquee-inner { display: inline-block; animation: marquee 22s linear infinite; }
-    .marquee-inner span { margin: 0 40px; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
-    .marquee-inner span::before { content: '★  '; color: var(--gold); }
-    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    <!-- Alternate language versions (English only for now) -->
+    <link rel="alternate" hreflang="en" href="https://gloriousscholars.acad.com.ng/">
 
-    /* ── SECTIONS COMMON ── */
-    section { padding: 80px 5%; }
-    .section-label {
-      font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;
-      color: var(--red); margin-bottom: 10px;
-    }
-    .section-title {
-      font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 48px);
-      font-weight: 900; line-height: 1.15; margin-bottom: 16px;
-    }
-    .section-sub { color: var(--gray); font-size: 16px; line-height: 1.7; max-width: 560px; }
-    .section-divider {
-      width: 60px; height: 4px;
-      background: linear-gradient(90deg, var(--red), var(--gold));
-      border-radius: 2px; margin: 20px 0;
-    }
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-    /* ── ABOUT ── */
-    #about { background: var(--white); }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-    .about-card {
-      background: var(--off); border-radius: 12px; padding: 36px;
-      border-left: 5px solid var(--red); position: relative; overflow: hidden;
-    }
-    .about-card::before {
-      content: '"'; position: absolute; top: -10px; right: 20px;
-      font-size: 120px; font-family: 'Playfair Display', serif;
-      color: rgba(204,20,20,.07); line-height: 1;
-    }
-    .about-card p { font-size: 16px; line-height: 1.8; color: var(--gray); }
-    .about-card strong { color: var(--black); }
-    .about-values { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .value-chip {
-      display: flex; align-items: center; gap: 10px;
-      background: var(--white); border-radius: 8px; padding: 12px 16px;
-      font-size: 13px; font-weight: 700; border: 1px solid #eee;
-    }
-    .value-chip .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--red); flex-shrink: 0; }
-    .about-founded {
-      background: var(--black); color: var(--white); border-radius: 12px;
-      padding: 36px; text-align: center;
-    }
-    .about-founded .yr {
-      font-family: 'Playfair Display', serif; font-size: 80px; font-weight: 900;
-      color: var(--gold); line-height: 1;
-    }
-    .about-founded p { font-size: 14px; color: #aaa; margin-top: 6px; letter-spacing: 1px; text-transform: uppercase; }
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    /* ── LEVELS ── */
-    #levels { background: var(--off); }
-    .levels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 48px; }
-    .level-card {
-      background: var(--white); border-radius: 12px; padding: 32px 24px;
-      border-top: 5px solid var(--red); text-align: center;
-      transition: transform .2s, box-shadow .2s;
-      cursor: default;
-    }
-    .level-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,.1); }
-    .level-icon { font-size: 40px; margin-bottom: 16px; }
-    .level-card h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
-    .level-card p { font-size: 13px; color: var(--gray); line-height: 1.6; }
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    /* ── WHY US ── */
-    #why { background: var(--black); color: var(--white); }
-    #why .section-title { color: var(--white); }
-    #why .section-sub { color: #aaa; }
-    .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 48px; }
-    .why-card {
-      background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08);
-      border-radius: 12px; padding: 32px;
-      transition: border-color .2s, background .2s;
-    }
-    .why-card:hover { border-color: var(--red); background: rgba(204,20,20,.08); }
-    .why-num {
-      font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900;
-      color: rgba(204,20,20,.25); line-height: 1; margin-bottom: 12px;
-    }
-    .why-card h3 { font-size: 17px; font-weight: 800; color: var(--gold); margin-bottom: 10px; }
-    .why-card p { font-size: 14px; color: #888; line-height: 1.7; }
+    <!-- Main Styles -->
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── ACHIEVEMENTS ── */
-    #achievements { background: var(--white); }
-    .ach-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 48px; }
-    .ach-card {
-      background: var(--off); border-radius: 12px; padding: 28px 24px;
-      display: flex; gap: 16px; align-items: flex-start;
-      border-bottom: 4px solid var(--gold);
-      transition: transform .2s;
-    }
-    .ach-card:hover { transform: translateY(-4px); }
-    .ach-icon { font-size: 32px; flex-shrink: 0; }
-    .ach-card h4 { font-size: 15px; font-weight: 800; margin-bottom: 4px; }
-    .ach-card p { font-size: 13px; color: var(--gray); line-height: 1.6; }
+        :root {
+            --red:    #CC1414;
+            --red-dk: #991010;
+            --gold:   #E8C42A;
+            --black:  #111111;
+            --white:  #FFFFFF;
+            --off:    #FEFCF8;
+            --gray:   #555555;
+            --light-bg: #FFFBF0;
+        }
 
-    /* ── TIMELINE ── */
-    #history { background: var(--off); }
-    .timeline { position: relative; margin-top: 48px; padding-left: 40px; }
-    .timeline::before { content: ''; position: absolute; left: 12px; top: 0; bottom: 0; width: 3px; background: linear-gradient(180deg, var(--red), var(--gold)); border-radius: 2px; }
-    .tl-item { position: relative; margin-bottom: 36px; }
-    .tl-dot { position: absolute; left: -35px; top: 5px; width: 18px; height: 18px; border-radius: 50%; background: var(--red); border: 3px solid var(--white); box-shadow: 0 0 0 3px var(--red); }
-    .tl-year { font-size: 12px; font-weight: 800; color: var(--red); letter-spacing: 1px; margin-bottom: 4px; text-transform: uppercase; }
-    .tl-item h4 { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
-    .tl-item p { font-size: 14px; color: var(--gray); line-height: 1.6; }
+        html { scroll-behavior: smooth; }
 
-    /* ── LEADERSHIP ── */
-    #leadership { background: var(--white); }
-    .leaders-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; margin-top: 48px; }
-    .leader-card {
-      border-radius: 12px; overflow: hidden;
-      border: 1px solid #eee;
-      transition: box-shadow .2s, transform .2s;
-    }
-    .leader-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,.1); transform: translateY(-4px); }
-    .leader-avatar {
-      background: linear-gradient(135deg, var(--red), var(--black));
-      height: 140px; display: flex; align-items: center; justify-content: center;
-    }
-    .leader-initials {
-      width: 80px; height: 80px; border-radius: 50%;
-      background: rgba(255,255,255,.15); border: 3px solid var(--gold);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--white);
-    }
-    .leader-info { padding: 24px; }
-    .leader-info h3 { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; margin-bottom: 4px; }
-    .leader-role { font-size: 12px; font-weight: 800; color: var(--red); letter-spacing: 1px; text-transform: uppercase; }
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: var(--black);
+            background: var(--light-bg);
+            overflow-x: hidden;
+        }
 
-    /* ── EXTRACURRICULAR ── */
-    #extra { background: var(--off); }
-    .extra-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 48px; }
-    .extra-card {
-      background: var(--white); border-radius: 10px; padding: 28px 20px; text-align: center;
-      border: 2px solid transparent; transition: border-color .2s, transform .2s;
-    }
-    .extra-card:hover { border-color: var(--red); transform: translateY(-4px); }
-    .extra-card .icon { font-size: 36px; margin-bottom: 12px; }
-    .extra-card h4 { font-size: 15px; font-weight: 800; }
-    .extra-card p { font-size: 13px; color: var(--gray); margin-top: 6px; }
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 0 5%;
+            height: 80px;
+            background: linear-gradient(135deg, #FFFFFF 0%, #FFF8E7 100%);
+            border-bottom: 3px solid var(--gold);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .nav-logo-img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--gold);
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .nav-logo-img img { width: 100%; height: 100%; object-fit: cover; }
+        .logo-placeholder {
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 900;
+            color: var(--red);
+        }
+        .nav-name { 
+            color: var(--black); 
+            font-family: 'Playfair Display', serif; 
+            font-size: 18px; 
+            font-weight: 800;
+        }
+        .nav-name span { color: var(--red); }
+        .nav-links { display: flex; gap: 28px; list-style: none; }
+        .nav-links a { 
+            color: #222; 
+            text-decoration: none; 
+            font-size: 14px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            transition: color 0.2s;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 5px;
+        }
+        .nav-links a:hover { color: var(--red); border-bottom-color: var(--gold); }
+        .nav-cta {
+            background: var(--red); 
+            color: var(--white); 
+            border: none; 
+            padding: 10px 24px;
+            font-weight: 800; 
+            font-size: 13px;
+            border-radius: 40px; 
+            cursor: pointer; 
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+        .nav-cta:hover { background: var(--red-dk); transform: translateY(-2px); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+        .hamburger span { width: 25px; height: 2px; background: var(--black); display: block; }
 
-    /* ── CONTACT ── */
-    #contact { background: var(--black); color: var(--white); }
-    #contact .section-title { color: var(--white); }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; margin-top: 48px; }
-    .contact-item { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 28px; }
-    .contact-icon {
-      width: 44px; height: 44px; border-radius: 8px;
-      background: var(--red); display: flex; align-items: center; justify-content: center;
-      font-size: 18px; flex-shrink: 0;
-    }
-    .contact-item h4 { font-size: 13px; font-weight: 800; color: var(--gold); letter-spacing: .5px; text-transform: uppercase; margin-bottom: 4px; }
-    .contact-item p, .contact-item a { font-size: 14px; color: #aaa; line-height: 1.7; text-decoration: none; }
-    .contact-item a:hover { color: var(--white); }
-    .social-row { display: flex; gap: 12px; margin-top: 32px; flex-wrap: wrap; }
-    .social-btn {
-      display: flex; align-items: center; gap: 8px;
-      background: rgba(255,255,255,.07); color: var(--white); text-decoration: none;
-      padding: 10px 18px; border-radius: 6px; font-size: 13px; font-weight: 700;
-      border: 1px solid rgba(255,255,255,.12); transition: background .2s;
-    }
-    .social-btn:hover { background: var(--red); border-color: var(--red); }
-    .map-placeholder {
-      background: rgba(255,255,255,.05); border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.1);
-      padding: 32px; display: flex; flex-direction: column; justify-content: center;
-      min-height: 300px;
-    }
-    .map-placeholder h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--gold); margin-bottom: 12px; }
-    .map-placeholder p { font-size: 14px; color: #888; line-height: 1.8; }
-    .map-placeholder .address-block {
-      background: rgba(255,255,255,.05); border-radius: 8px; padding: 20px;
-      margin-top: 20px; border-left: 3px solid var(--red);
-      font-size: 15px; color: #ccc; line-height: 1.8;
-    }
+        /* Hero */
+        #hero {
+            min-height: 100vh;
+            background: linear-gradient(120deg, #FFF8ED 0%, #FFFFFF 100%);
+            display: grid; grid-template-columns: 1fr 1fr; align-items: center;
+            padding: 120px 5% 80px;
+            position: relative;
+        }
+        .hero-content { position: relative; z-index: 2; }
+        .hero-badge {
+            display: inline-block;
+            background: var(--red); color: var(--white);
+            font-size: 11px; font-weight: 800; letter-spacing: 2px;
+            padding: 5px 16px; border-radius: 20px; margin-bottom: 22px;
+        }
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 5vw, 72px);
+            font-weight: 900; line-height: 1.1;
+            color: var(--black);
+            margin-bottom: 10px;
+        }
+        .hero-title em { color: var(--red); font-style: normal; }
+        .hero-motto {
+            font-size: clamp(14px, 2vw, 20px); font-weight: 800;
+            color: var(--red); letter-spacing: 4px;
+            margin-bottom: 24px;
+        }
+        .hero-desc {
+            color: #444; font-size: 16px; line-height: 1.7; max-width: 480px; margin-bottom: 36px;
+        }
+        .btn-primary {
+            background: var(--red); color: var(--white); padding: 14px 32px;
+            font-weight: 800; font-size: 14px;
+            border: none; border-radius: 40px; cursor: pointer; text-decoration: none;
+            display: inline-block; transition: all 0.2s;
+        }
+        .btn-primary:hover { background: var(--red-dk); transform: translateY(-2px); }
+        .btn-outline {
+            background: transparent; color: var(--red); padding: 14px 32px;
+            font-weight: 800; font-size: 14px;
+            border: 2px solid var(--red); border-radius: 40px; cursor: pointer;
+            text-decoration: none; display: inline-block;
+        }
+        .btn-outline:hover { background: var(--red); color: var(--white); }
+        .hero-visual { display: flex; justify-content: center; }
+        .logo-ring {
+            width: clamp(280px, 30vw, 420px);
+            height: clamp(280px, 30vw, 420px);
+            border-radius: 50%;
+            border: 5px solid var(--gold);
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .hero-stats { display: flex; gap: 32px; margin-top: 48px; flex-wrap: wrap; }
+        .stat { border-left: 3px solid var(--gold); padding-left: 14px; }
+        .stat-num { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 900; color: var(--red); }
 
-    /* ── FOOTER ── */
-    footer {
-      background: #0a0a0a; color: #666; text-align: center;
-      padding: 28px 5%; border-top: 1px solid #1a1a1a;
-    }
-    footer strong { color: var(--gold); }
-    footer p { font-size: 13px; line-height: 1.8; }
+        /* Sections */
+        section { padding: 80px 5%; }
+        .section-label {
+            font-size: 12px; font-weight: 800; letter-spacing: 3px;
+            color: var(--red); margin-bottom: 10px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 4vw, 48px);
+            font-weight: 900; margin-bottom: 16px;
+        }
+        .section-divider {
+            width: 70px; height: 4px;
+            background: linear-gradient(90deg, var(--red), var(--gold));
+            border-radius: 2px; margin: 20px 0;
+        }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+        .levels-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 48px; }
+        .level-card { background: white; border-radius: 24px; padding: 32px; text-align: center; border-bottom: 5px solid var(--red); }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; margin-top: 48px; }
+        .why-card { background: white; border-radius: 20px; padding: 32px; border: 1px solid rgba(204,20,20,0.15); }
+        .gallery-preview { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin: 48px 0; }
+        .gallery-card { background: white; border-radius: 20px; overflow: hidden; text-align: center; }
+        .gallery-img { height: 180px; background: #f3e9ce; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; }
+        .contact-item { display: flex; gap: 16px; margin-bottom: 28px; }
+        .contact-icon { width: 44px; height: 44px; background: var(--red); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        footer { background: #0a0a0a; color: #666; text-align: center; padding: 32px 5%; border-top: 2px solid var(--gold); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* ── CTA BANNER ── */
-    .cta-banner {
-      background: linear-gradient(135deg, var(--red) 0%, var(--red-dk) 100%);
-      padding: 64px 5%; text-align: center;
-    }
-    .cta-banner h2 {
-      font-family: 'Playfair Display', serif; font-size: clamp(26px, 4vw, 44px);
-      font-weight: 900; color: var(--white); margin-bottom: 12px;
-    }
-    .cta-banner p { color: rgba(255,255,255,.8); font-size: 16px; margin-bottom: 32px; }
-    .cta-banner .btn-primary { background: var(--white); color: var(--red); }
-    .cta-banner .btn-primary:hover { background: var(--gold); color: var(--black); }
+        @media (max-width: 768px) {
+            #hero { grid-template-columns: 1fr; text-align: center; padding-top: 110px; }
+            .hero-visual { display: none; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .nav-links, .nav-cta { display: none; }
+            .hamburger { display: flex; }
+        }
+    </style>
 
-    /* ── SCROLL ANIMATIONS ── */
-    .reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      #hero { grid-template-columns: 1fr; text-align: center; padding-top: 100px; }
-      .hero-visual { display: none; }
-      .hero-desc { margin: 0 auto 32px; }
-      .hero-btns { justify-content: center; }
-      .hero-stats { justify-content: center; }
-      .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-      .nav-links, .nav-cta { display: none; }
-      .hamburger { display: flex; }
+    <!-- Structured Data / Schema.org for School -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Glorious Scholars Academy",
+        "alternateName": "GSA",
+        "description": "Christ-centred school in Sango-Ota offering Crèche, Nursery, Primary and Secondary education with academic excellence, God-fearing values, and character development.",
+        "url": "https://gloriousscholarsacademy.com.ng/",
+        "logo": "https://gloriousscholarsacademy.com.ng/logo.png",
+        "image": "https://gloriousscholarsacademy.com.ng/images/school-building.jpg",
+        "foundingDate": "2009",
+        "foundingLocation": "Sango-Ota, Ogun State, Nigeria",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "24/26 Ijaliye, Ewupe Road, Singer Bus Stop",
+            "addressLocality": "Sango",
+            "addressRegion": "Ogun State",
+            "addressCountry": "NG"
+        },
+        "contactPoint": [
+            {
+                "@type": "ContactPoint",
+                "telephone": "+2348026944961",
+                "contactType": "admissions",
+                "availableLanguage": ["English"]
+            },
+            {
+                "@type": "ContactPoint",
+                "telephone": "+2348132899821",
+                "contactType": "general"
+            }
+        ],
+        "telephone": ["+2348026944961", "+2348132899821", "+2348130271623"],
+        "email": "gloriousscholarsacademy@yahoo.com",
+        "sameAs": [
+            "https://facebook.com/gloriousscholarsacademy",
+            "https://instagram.com/gloriousscholarsacademy",
+            "https://tiktok.com/@gloriousscholars"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Educational Programs",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Crèche / Nursery" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Primary School" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Junior Secondary" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Course", "name": "Senior Secondary" } }
+            ]
+        }
     }
-  </style>
+    </script>
+
+    <!-- Local Business Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Glorious Scholars Academy",
+        "image": "https://gloriousscholarsacademy.com.ng/logo.png",
+        "priceRange": "₦",
+        "telephone": "+2348026944961",
+        "email": "gloriousscholarsacademy@yahoo.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "24/26 Ijaliye, Ewupe Road, Singer Bus Stop",
+            "addressLocality": "Sango",
+            "addressRegion": "Ogun State",
+            "addressCountry": "NG"
+        }
+    }
+    </script>
+
+    <!-- Verification Meta Tags (placeholders for actual codes) -->
+    <meta name="google-site-verification" content="google-site-verification=CgwvQf2dum6xrXx8FSC1ghUWL7qVKrXV5eustV4OO6I">
+    <meta name="facebook-domain-verification" content="YOUR_FACEBOOK_VERIFICATION_CODE">
 </head>
+
 <body>
 
-<!-- NAV -->
+<!-- Navigation -->
 <nav>
-  <a class="nav-logo" href="#">
-    <div class="logo-badge" style="font-family:'Playfair Display',serif;font-size:13px;font-weight:900;color:#CC1414;">GSA</div>
-    <span class="nav-name">Glorious Scholars Academy</span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#levels">Levels</a></li>
-    <li><a href="#why">Why Us</a></li>
-    <li><a href="#achievements">Awards</a></li>
-    <li><a href="#leadership">Leadership</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enrol Now</button>
-  <div class="hamburger" onclick="this.classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </div>
+    <a class="nav-logo" href="#hero">
+        <div class="nav-logo-img" id="logoContainer">
+            <div class="logo-placeholder" id="dynamicLogo">GSA</div>
+        </div>
+        <span class="nav-name">Glorious <span>Scholars</span> Academy</span>
+    </a>
+    <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="https://acad.com.ng/gsa/login.php" target="_blank">Portal</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Enrol Now</button>
+    <div class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></div>
 </nav>
 
-<!-- HERO -->
+<!-- Hero Section -->
 <section id="hero">
-  <div class="hero-bg-pattern"></div>
-  <div class="hero-red-bar"></div>
-
-  <div class="hero-content reveal">
-    <div class="hero-badge">Est. 2009 · Sango-Ota, Ogun State</div>
-    <h1 class="hero-title">
-      Glorious<br /><em>Scholars</em><br />Academy
-    </h1>
-    <p class="hero-motto">✦ Shaping Lives ✦</p>
-    <p class="hero-desc">
-      A Christ-centred school where academic excellence meets strong character. We nurture every child's potential — from Nursery through Secondary — with discipline, love, and God-fearing values.
-    </p>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Enrol Your Child →</a>
-      <a href="#about" class="btn-outline">Learn More</a>
+    <div class="hero-content reveal">
+        <div class="hero-badge">Est. 2009 · Sango-Ota, Ogun State</div>
+        <h1 class="hero-title">Glorious<br /><em>Scholars</em><br />Academy</h1>
+        <p class="hero-motto">✦ Shaping Lives ✦</p>
+        <p class="hero-desc">A Christ-centred school where academic excellence meets strong character. From Nursery through Secondary, we nurture potential with discipline, love, and God-fearing values.</p>
+        <div class="hero-btns">
+            <a href="#contact" class="btn-primary">Enrol Your Child →</a>
+            <a href="#about" class="btn-outline">Learn More</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years of Excellence</div></div>
+            <div class="stat"><div class="stat-num">4</div><div class="stat-label">School Levels</div></div>
+            <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Awards & Honours</div></div>
+        </div>
     </div>
-    <div class="hero-stats">
-      <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Years of Excellence</div></div>
-      <div class="stat"><div class="stat-num">3</div><div class="stat-label">School Levels</div></div>
-      <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Awards & Honours</div></div>
+    <div class="hero-visual">
+        <div class="logo-ring">
+            <div class="logo-ring-placeholder" id="heroLogoPlace">
+                <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="85%">
+                    <rect x="40" y="110" width="120" height="10" rx="3" fill="#c8a870"/>
+                    <path d="M40 115 Q100 95 160 115 L160 90 Q100 70 40 90 Z" fill="#ddd"/>
+                    <path d="M40 115 Q100 135 160 115 L160 90 Q100 110 40 90 Z" fill="#eee"/>
+                    <path d="M40 90 L40 115 Q70 105 100 110 L100 85 Q70 80 40 90 Z" fill="#f5f5f5"/>
+                    <path d="M160 90 L160 115 Q130 105 100 110 L100 85 Q130 80 160 90 Z" fill="#ebebeb"/>
+                    <rect x="97" y="80" width="6" height="40" rx="2" fill="#555"/>
+                    <ellipse cx="100" cy="72" rx="7" ry="10" fill="#E8C42A"/>
+                    <ellipse cx="100" cy="68" rx="4" ry="7" fill="#ff8c00"/>
+                    <ellipse cx="100" cy="64" rx="2" ry="4" fill="#ff4500"/>
+                    <rect x="50" y="175" width="100" height="22" rx="4" fill="#111"/>
+                    <text x="100" y="190" text-anchor="middle" font-family="'Playfair Display',serif" font-size="11" fill="#E8C42A" font-weight="bold">ACADEMY</text>
+                    <path id="arc" d="M30,130 A80,80 0 0,1 170,130" fill="none"/>
+                    <text font-family="'Playfair Display',serif" font-size="11" fill="#111" font-weight="bold"><textPath href="#arc" startOffset="5%">GLORIOUS SCHOLARS</textPath></text>
+                </svg>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div class="hero-visual">
-    <div class="logo-ring">
-      <div class="logo-ring-placeholder">
-        <svg viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg" width="90%">
-          <!-- Book -->
-          <rect x="40" y="110" width="120" height="10" rx="3" fill="#c8a870"/>
-          <path d="M40 115 Q100 95 160 115 L160 90 Q100 70 40 90 Z" fill="#ddd"/>
-          <path d="M40 115 Q100 135 160 115 L160 90 Q100 110 40 90 Z" fill="#eee"/>
-          <!-- Left page -->
-          <path d="M40 90 L40 115 Q70 105 100 110 L100 85 Q70 80 40 90 Z" fill="#f5f5f5"/>
-          <!-- Right page -->
-          <path d="M160 90 L160 115 Q130 105 100 110 L100 85 Q130 80 160 90 Z" fill="#ebebeb"/>
-          <!-- Spine -->
-          <rect x="97" y="80" width="6" height="40" rx="2" fill="#555"/>
-          <!-- Flame -->
-          <ellipse cx="100" cy="72" rx="7" ry="10" fill="#E8C42A"/>
-          <ellipse cx="100" cy="68" rx="4" ry="7" fill="#ff8c00"/>
-          <ellipse cx="100" cy="64" rx="2" ry="4" fill="#ff4500"/>
-          <!-- Scroll -->
-          <ellipse cx="138" cy="130" rx="18" ry="8" fill="#ddd"/>
-          <rect x="120" y="122" width="36" height="16" rx="3" fill="#e8e8e8"/>
-          <ellipse cx="138" cy="138" rx="18" ry="8" fill="#d0d0d0"/>
-          <circle cx="138" cy="130" r="5" fill="#CC1414" opacity=".8"/>
-          <!-- Red dots decoration -->
-          <circle cx="30" cy="160" r="8" fill="#CC1414"/>
-          <circle cx="170" cy="160" r="8" fill="#CC1414"/>
-          <!-- ACADEMY text area -->
-          <rect x="50" y="175" width="100" height="22" rx="4" fill="#111"/>
-          <text x="100" y="190" text-anchor="middle" font-family="'Playfair Display',serif" font-size="11" fill="#E8C42A" font-weight="bold">ACADEMY</text>
-          <!-- School name arc -->
-          <path id="arc" d="M30,130 A80,80 0 0,1 170,130" fill="none"/>
-          <text font-family="'Playfair Display',serif" font-size="11" fill="#111" font-weight="bold">
-            <textPath href="#arc" startOffset="5%">GLORIOUS SCHOLARS</textPath>
-          </text>
-        </svg>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-bar">
-  <div class="marquee-inner">
-    <span>Academic Excellence</span>
-    <span>Shaping Lives Since 2009</span>
-    <span>God-Fearing Values</span>
-    <span>JET Competition Champions</span>
-    <span>Inter-School Competitions</span>
-    <span>Annual Prize Giving Day</span>
-    <span>Character Building</span>
-    <span>ICT & Modern Teaching</span>
-    <span>Academic Excellence</span>
-    <span>Shaping Lives Since 2009</span>
-    <span>God-Fearing Values</span>
-    <span>JET Competition Champions</span>
-    <span>Inter-School Competitions</span>
-    <span>Annual Prize Giving Day</span>
-    <span>Character Building</span>
-    <span>ICT & Modern Teaching</span>
-  </div>
-</div>
-
-<!-- ABOUT -->
+<!-- About Section -->
 <section id="about">
-  <div class="about-grid">
-    <div class="reveal">
-      <p class="section-label">About the School</p>
-      <h2 class="section-title">A Legacy of <em style="color:var(--red);">Excellence</em> & Faith</h2>
-      <div class="section-divider"></div>
-      <div class="about-card">
-        <p>
-          Founded in <strong>2009</strong> by Pastor (Mrs) Mary Olufunmilayo Afere, Glorious Scholars Academy is a Christ-centred institution located at <strong>24/26 Ijaliye, Ewupe Road, Singer Bus Stop, Sango, Ogun State</strong>. For over 15 years, we have been committed to raising a generation of academically sound, morally upright, and God-fearing scholars.
-        </p>
-        <p style="margin-top:16px;">
-          Our holistic approach ensures students excel in academics while building strong character, discipline, and ICT skills for a modern world.
-        </p>
-      </div>
-      <div class="about-values">
-        <div class="value-chip"><span class="dot"></span>Academic Excellence</div>
-        <div class="value-chip"><span class="dot"></span>God-Fearing Values</div>
-        <div class="value-chip"><span class="dot"></span>High Moral Discipline</div>
-        <div class="value-chip"><span class="dot"></span>Character Building</div>
-        <div class="value-chip"><span class="dot"></span>ICT & Innovation</div>
-        <div class="value-chip"><span class="dot"></span>Well-Structured Curriculum</div>
-      </div>
+    <div class="about-grid">
+        <div class="reveal">
+            <p class="section-label">About the School</p>
+            <h2 class="section-title">A Legacy of <em style="color:var(--red);">Excellence</em> & Faith</h2>
+            <div class="section-divider"></div>
+            <div class="about-card" style="background:var(--off); border-left:6px solid var(--gold); padding:36px; border-radius:24px;">
+                <p>Founded in <strong>2009</strong> by Pastor (Mrs) Mary Olufunmilayo Afere, Glorious Scholars Academy is a Christ-centred institution located at <strong>24/26 Ijaliye, Ewupe Road, Singer Bus Stop, Sango, Ogun State</strong>. For over 15 years, we have been committed to raising a generation of academically sound, morally upright, and God-fearing scholars.</p>
+                <p style="margin-top:16px;">Our holistic approach ensures students excel in academics while building strong character, discipline, and ICT skills for a modern world.</p>
+            </div>
+            <div class="about-values" style="display:flex; gap:12px; margin-top:24px; flex-wrap:wrap;">
+                <span style="background:white; padding:8px 18px; border-radius:40px; font-weight:700;">Academic Excellence</span>
+                <span style="background:white; padding:8px 18px; border-radius:40px; font-weight:700;">God-Fearing Values</span>
+                <span style="background:white; padding:8px 18px; border-radius:40px; font-weight:700;">Character Building</span>
+            </div>
+        </div>
+        <div class="reveal">
+            <div style="background: linear-gradient(145deg, #111, #1e1e1e); border-radius:24px; padding:36px; text-align:center;">
+                <div style="font-size:80px; font-weight:900; color:var(--gold);">2009</div>
+                <p>Year Founded</p>
+                <p style="margin-top:12px; font-weight:800; color:var(--gold);">Motto: "Shaping Lives"</p>
+            </div>
+        </div>
     </div>
-    <div class="reveal" style="display:flex;flex-direction:column;gap:20px;">
-      <div class="about-founded">
-        <div class="yr">2009</div>
-        <p>Year Founded</p>
-        <p style="margin-top:12px;font-size:16px;font-weight:800;color:var(--gold);">Motto: "Shaping Lives"</p>
-      </div>
-      <div style="background:var(--red);border-radius:12px;padding:28px;color:var(--white);">
-        <p style="font-size:15px;line-height:1.8;">
-          <strong style="font-size:20px;font-family:'Playfair Display',serif;">Our Promise</strong><br/>
-          Every child who walks through our doors is nurtured academically, morally, and spiritually — prepared not just for exams, but for life.
-        </p>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- SCHOOL LEVELS -->
-<section id="levels">
-  <div class="reveal" style="text-align:center;">
-    <p class="section-label">What We Offer</p>
-    <h2 class="section-title">School Levels</h2>
-    <div class="section-divider" style="margin:20px auto;"></div>
-    <p class="section-sub" style="margin:0 auto;">We provide a seamless educational journey from the earliest years through to Senior Secondary level.</p>
-  </div>
-  <div class="levels-grid">
-    <div class="level-card reveal">
-      <div class="level-icon">🍼</div>
-      <h3>Crèche / Nursery</h3>
-      <p>A warm, safe, and stimulating environment for our youngest learners to explore, play, and grow.</p>
+<!-- Admissions Section -->
+<section id="admissions" style="background:var(--white);">
+    <div class="reveal" style="text-align:center;">
+        <p class="section-label">Join Our Family</p>
+        <h2 class="section-title">Admissions Open 2026/2027</h2>
+        <div class="section-divider" style="margin:20px auto;"></div>
+        <p class="section-sub" style="max-width:600px; margin:0 auto;">We welcome students from Crèche to Senior Secondary. Experience transformative education rooted in excellence and faith.</p>
     </div>
-    <div class="level-card reveal">
-      <div class="level-icon">📚</div>
-      <h3>Primary School</h3>
-      <p>Building strong academic foundations in literacy, numeracy, and critical thinking with care and creativity.</p>
+    <div style="max-width:700px; margin:40px auto 0; background:var(--light-bg); padding:32px; border-radius:32px; text-align:center;">
+        <p style="font-size:18px; font-weight:700;">📋 Admission Process: Entrance Assessment & Interview</p>
+        <p style="margin:16px 0;">Contact our admission office via phone or visit the school for registration form. Limited slots available!</p>
+        <a href="#contact" class="btn-primary" style="display:inline-block; margin-top:16px;">Request Admission Pack</a>
     </div>
-    <div class="level-card reveal">
-      <div class="level-icon">🎓</div>
-      <h3>Junior Secondary</h3>
-      <p>Preparing students with a broad curriculum, fostering intellectual curiosity and leadership skills.</p>
-    </div>
-    <div class="level-card reveal">
-      <div class="level-icon">🏆</div>
-      <h3>Senior Secondary</h3>
-      <p>Rigorous academic preparation for WAEC, NECO, and beyond — with a focus on results and character.</p>
-    </div>
-  </div>
 </section>
 
-<!-- WHY CHOOSE US -->
+<!-- School Levels Section -->
+<section id="levels" style="background:var(--light-bg);">
+    <div style="text-align:center;">
+        <p class="section-label">What We Offer</p>
+        <h2 class="section-title">School Levels</h2>
+        <div class="section-divider" style="margin:20px auto;"></div>
+    </div>
+    <div class="levels-grid">
+        <div class="level-card reveal"><div class="level-icon" style="font-size:40px;">🍼</div><h3>Crèche / Nursery</h3><p>Warm, safe environment for youngest learners.</p></div>
+        <div class="level-card reveal"><div class="level-icon" style="font-size:40px;">📚</div><h3>Primary School</h3><p>Strong academic foundations in literacy & numeracy.</p></div>
+        <div class="level-card reveal"><div class="level-icon" style="font-size:40px;">🎓</div><h3>Junior Secondary</h3><p>Broad curriculum fostering curiosity & leadership.</p></div>
+        <div class="level-card reveal"><div class="level-icon" style="font-size:40px;">🏆</div><h3>Senior Secondary</h3><p>Rigorous preparation for WAEC, NECO & beyond.</p></div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
 <section id="why">
-  <div class="reveal">
-    <p class="section-label">Why GSA?</p>
-    <h2 class="section-title">6 Reasons Families Choose Us</h2>
-    <div class="section-divider"></div>
-    <p class="section-sub">We are more than a school — we are a community dedicated to total child development.</p>
-  </div>
-  <div class="why-grid">
-    <div class="why-card reveal">
-      <div class="why-num">01</div>
-      <h3>Excellent Academic Performance</h3>
-      <p>Our students consistently achieve outstanding results in national examinations and inter-school competitions.</p>
+    <div class="reveal"><p class="section-label">Why GSA?</p><h2 class="section-title">6 Reasons Families Choose Us</h2><div class="section-divider"></div></div>
+    <div class="why-grid">
+        <div class="why-card"><div class="why-num" style="font-size:48px; font-weight:900; color:rgba(204,20,20,0.2);">01</div><h3>Excellent Academic Performance</h3><p>Consistent outstanding results in national examinations.</p></div>
+        <div class="why-card"><div class="why-num" style="font-size:48px; font-weight:900; color:rgba(204,20,20,0.2);">02</div><h3>Well-Structured Curriculum</h3><p>Balanced academics + creative learning.</p></div>
+        <div class="why-card"><div class="why-num" style="font-size:48px; font-weight:900; color:rgba(204,20,20,0.2);">03</div><h3>God-Fearing Students</h3><p>Biblical values & spiritual growth.</p></div>
+        <div class="why-card"><div class="why-num" style="font-size:48px; font-weight:900; color:rgba(204,20,20,0.2);">04</div><h3>High Moral & Discipline</h3><p>Respectful, responsible young leaders.</p></div>
+        <div class="why-card"><div class="why-num" style="font-size:48px; font-weight:900; color:rgba(204,20,20,0.2);">05</div><h3>ICT & Modern Teaching</h3><p>Digital skills for 21st century.</p></div>
+        <div class="why-card"><div class="why-num" style="font-size:48px; font-weight:900; color:rgba(204,20,20,0.2);">06</div><h3>Character Building</h3><p>Integrity, leadership, empathy.</p></div>
     </div>
-    <div class="why-card reveal">
-      <div class="why-num">02</div>
-      <h3>Well-Structured Curriculum</h3>
-      <p>A carefully designed, balanced curriculum that combines core academics with creative and vocational learning.</p>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-num">03</div>
-      <h3>God-Fearing Students</h3>
-      <p>We instil strong biblical values and spiritual principles that guide students through life beyond the classroom.</p>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-num">04</div>
-      <h3>High Moral & Discipline</h3>
-      <p>A structured, disciplined environment that produces respectful, responsible, and confident young people.</p>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-num">05</div>
-      <h3>ICT & Modern Teaching</h3>
-      <p>We embrace technology in the classroom, equipping students with digital skills for the 21st century.</p>
-    </div>
-    <div class="why-card reveal">
-      <div class="why-num">06</div>
-      <h3>Character Building</h3>
-      <p>Leadership, integrity, empathy, and perseverance are woven into every aspect of life at GSA.</p>
-    </div>
-  </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
-<section id="achievements">
-  <div class="reveal">
-    <p class="section-label">Our Accomplishments</p>
-    <h2 class="section-title">Awards & Achievements</h2>
-    <div class="section-divider"></div>
-  </div>
-  <div class="ach-grid">
-    <div class="ach-card reveal">
-      <div class="ach-icon">🏅</div>
-      <div>
-        <h4>JET Competition Awards</h4>
-        <p>Multiple recognitions in the prestigious Junior Engineers, Technicians & Scientists (JET) programme.</p>
-      </div>
+<!-- Gallery Section -->
+<section id="gallery" style="background:var(--white);">
+    <div class="reveal" style="text-align:center;">
+        <p class="section-label">Moments at GSA</p>
+        <h2 class="section-title">Our Gallery</h2>
+        <div class="section-divider" style="margin:20px auto;"></div>
+        <p class="section-sub" style="max-width:600px; margin:0 auto;">A glimpse into school life, events, and achievements.</p>
     </div>
-    <div class="ach-card reveal">
-      <div class="ach-icon">📺</div>
-      <div>
-        <h4>Inter-School TV Competition</h4>
-        <p>Represented and excelled at the Channel 7 Yaba inter-school competition, showcasing our students' talent on a public platform.</p>
-      </div>
+    <div class="gallery-preview">
+        <div class="gallery-card reveal"><div class="gallery-img">🏆</div><p>JET Competition Awards</p></div>
+        <div class="gallery-card reveal"><div class="gallery-img">🎭</div><p>Cultural Day 2024</p></div>
+        <div class="gallery-card reveal"><div class="gallery-img">⚽</div><p>Inter-House Sports</p></div>
+        <div class="gallery-card reveal"><div class="gallery-img">📚</div><p>Classroom Excellence</p></div>
     </div>
-    <div class="ach-card reveal">
-      <div class="ach-icon">➕</div>
-      <div>
-        <h4>Mathematics Competition</h4>
-        <p>Consistently outstanding performance in inter-school mathematics competitions, reflecting our strong STEM culture.</p>
-      </div>
+    <div style="text-align:center; margin-top:24px;">
+        <a href="#" class="btn-outline" id="viewMoreGalleryBtn" style="display:inline-block;">📸 View Full Gallery →</a>
     </div>
-    <div class="ach-card reveal">
-      <div class="ach-icon">⚽</div>
-      <div>
-        <h4>Inter-School Football</h4>
-        <p>A proud tradition of sporting excellence with competitive results in regional football tournaments.</p>
-      </div>
-    </div>
-    <div class="ach-card reveal">
-      <div class="ach-icon">🏃</div>
-      <div>
-        <h4>Inter-House Sports</h4>
-        <p>Vibrant bi-annual inter-house sports competitions that promote teamwork, fitness, and school spirit.</p>
-      </div>
-    </div>
-    <div class="ach-card reveal">
-      <div class="ach-icon">🎉</div>
-      <div>
-        <h4>10th Year Anniversary</h4>
-        <p>Celebrated a decade of impactful education in 2019, marking 10 years of shaping lives in Sango-Ota.</p>
-      </div>
-    </div>
-  </div>
 </section>
 
-<!-- HISTORY TIMELINE -->
-<section id="history" class="reveal">
-  <p class="section-label">Our Journey</p>
-  <h2 class="section-title">School Milestones</h2>
-  <div class="section-divider"></div>
-  <div class="timeline">
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-year">2009</div>
-      <h4>Foundation</h4>
-      <p>Glorious Scholars Academy was founded by Pastor (Mrs) Mary Olufunmilayo Afere with a vision to provide quality, Christ-centred education in Sango, Ogun State.</p>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-year">Annual</div>
-      <h4>Prize Giving Day</h4>
-      <p>Every year, our students are celebrated for outstanding academic and co-curricular achievements at our Annual Prize Giving Day.</p>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-year">Bi-Annual</div>
-      <h4>Inter-House Sports Competition</h4>
-      <p>A beloved tradition that fosters school spirit, healthy competition, teamwork, and physical development across all students.</p>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-year">Bi-Annual</div>
-      <h4>Cultural Day Celebration</h4>
-      <p>Students showcase Nigeria's rich cultural heritage through traditional attire, food, dances, and performances.</p>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-year">Annual</div>
-      <h4>Mathematics Competition</h4>
-      <p>Our annual in-school mathematics challenge identifies and celebrates top mathematical talent, preparing students for inter-school competitions.</p>
-    </div>
-    <div class="tl-item reveal">
-      <div class="tl-dot"></div>
-      <div class="tl-year">2019</div>
-      <h4>10th Anniversary</h4>
-      <p>A landmark celebration marking a decade of shaping lives, impacting the community, and building academic and moral excellence.</p>
-    </div>
-  </div>
-</section>
-
-<!-- LEADERSHIP -->
-<section id="leadership">
-  <div class="reveal">
-    <p class="section-label">Our People</p>
-    <h2 class="section-title">Leadership Team</h2>
-    <div class="section-divider"></div>
-    <p class="section-sub">Dedicated educators and visionary leaders who make GSA exceptional.</p>
-  </div>
-  <div class="leaders-grid">
-    <div class="leader-card reveal">
-      <div class="leader-avatar">
-        <div class="leader-initials">MA</div>
-      </div>
-      <div class="leader-info">
-        <h3>Pastor (Mrs) Mary O. Afere</h3>
-        <p class="leader-role">Founder</p>
-        <p style="font-size:13px;color:var(--gray);margin-top:10px;line-height:1.7;">A woman of faith and vision, Pastor Afere established GSA in 2009 with a mandate to raise God-fearing, academically excellent scholars who will impact their generation.</p>
-      </div>
-    </div>
-    <div class="leader-card reveal">
-      <div class="leader-avatar" style="background:linear-gradient(135deg,#991010,#333);">
-        <div class="leader-initials">MA</div>
-      </div>
-      <div class="leader-info">
-        <h3>Mrs Morenike Adebiyi</h3>
-        <p class="leader-role">Principal</p>
-        <p style="font-size:13px;color:var(--gray);margin-top:10px;line-height:1.7;">A seasoned educator committed to maintaining the highest academic standards and fostering a thriving school community built on discipline and excellence.</p>
-      </div>
-    </div>
-    <div class="leader-card reveal">
-      <div class="leader-avatar" style="background:linear-gradient(135deg,#333,#CC1414);">
-        <div class="leader-initials">OD</div>
-      </div>
-      <div class="leader-info">
-        <h3>Mr Olanrewaju Dotun</h3>
-        <p class="leader-role">Vice Principal</p>
-        <p style="font-size:13px;color:var(--gray);margin-top:10px;line-height:1.7;">A dedicated administrator who works tirelessly to support staff, mentor students, and ensure the smooth day-to-day running of the school.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EXTRACURRICULAR -->
-<section id="extra">
-  <div class="reveal" style="text-align:center;">
-    <p class="section-label">Beyond the Classroom</p>
-    <h2 class="section-title">Extracurricular Programmes</h2>
-    <div class="section-divider" style="margin:20px auto;"></div>
-    <p class="section-sub" style="margin:0 auto;">We believe in developing the whole child — in skills, talents, and leadership.</p>
-  </div>
-  <div class="extra-grid">
-    <div class="extra-card reveal">
-      <div class="icon">⚽</div>
-      <h4>Sports</h4>
-      <p>Football, athletics, and inter-house competitions promoting fitness and teamwork.</p>
-    </div>
-    <div class="extra-card reveal">
-      <div class="icon">🔬</div>
-      <h4>JET Club</h4>
-      <p>Junior Engineers, Technicians & Scientists — fostering STEM innovation and creativity.</p>
-    </div>
-    <div class="extra-card reveal">
-      <div class="icon">📰</div>
-      <h4>Press Club</h4>
-      <p>Building communication, journalism, and writing skills in budding young reporters.</p>
-    </div>
-    <div class="extra-card reveal">
-      <div class="icon">🎭</div>
-      <h4>Drama Club</h4>
-      <p>Developing confidence, creativity, and public speaking through theatrical performances.</p>
-    </div>
-    <div class="extra-card reveal">
-      <div class="icon">🎨</div>
-      <h4>Arts & Crafts</h4>
-      <p>Exploring creativity through painting, drawing, craftwork, and artistic expression.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA BANNER -->
-<div class="cta-banner reveal">
-  <h2>Ready to Give Your Child the Best?</h2>
-  <p>Join the Glorious Scholars Academy family today. Enrolment is open — limited spaces available.</p>
-  <a href="#contact" class="btn-primary">Contact Us to Enrol →</a>
-</div>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="reveal">
-    <p class="section-label" style="color:var(--gold);">Get in Touch</p>
-    <h2 class="section-title">Contact Us</h2>
-    <div class="section-divider"></div>
-    <p class="section-sub" style="color:#aaa;">We'd love to hear from you. Visit us, call us, or send us a message.</p>
-  </div>
-  <div class="contact-grid">
+<!-- Contact Section -->
+<section id="contact" style="background:var(--black); color:var(--white);">
     <div class="reveal">
-      <div class="contact-item">
-        <div class="contact-icon">📍</div>
-        <div>
-          <h4>Address</h4>
-          <p>24/26, Ijaliye, Ewupe Road,<br/>Singer Bus Stop, Sango,<br/>Ogun State, Nigeria</p>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">📞</div>
-        <div>
-          <h4>Phone Numbers</h4>
-          <a href="tel:08026944961">08026944961</a><br/>
-          <a href="tel:08132899821">08132899821</a><br/>
-          <a href="tel:08130271623">08130271623</a>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">✉️</div>
-        <div>
-          <h4>Email Addresses</h4>
-          <a href="mailto:gloriousscholarsacademy@yahoo.com">gloriousscholarsacademy@yahoo.com</a><br/>
-          <a href="mailto:gloriousscholars@gmail.com">gloriousscholars@gmail.com</a>
-        </div>
-      </div>
-      <div class="contact-item">
-        <div class="contact-icon">🕐</div>
-        <div>
-          <h4>School Hours</h4>
-          <p>Monday – Friday: 7:30am – 3:30pm<br/>Saturday: By appointment</p>
-        </div>
-      </div>
-      <div>
-        <h4 style="font-size:13px;font-weight:800;color:var(--gold);letter-spacing:.5px;text-transform:uppercase;margin-bottom:12px;">Follow Us On Social Media</h4>
-        <div class="social-row">
-          <a href="https://facebook.com" target="_blank" class="social-btn">📘 Facebook</a>
-          <a href="https://instagram.com" target="_blank" class="social-btn">📸 Instagram</a>
-          <a href="https://tiktok.com" target="_blank" class="social-btn">🎵 TikTok</a>
-        </div>
-        <p style="font-size:12px;color:#666;margin-top:10px;">Search: <strong style="color:#aaa;">GSA Glorious Scholars Academy</strong></p>
-      </div>
+        <p class="section-label" style="color:var(--gold);">Get in Touch</p>
+        <h2 class="section-title" style="color:var(--white);">Contact Us</h2>
+        <div class="section-divider"></div>
     </div>
-    <div class="map-placeholder reveal">
-      <h3>📍 Find Us</h3>
-      <p>We are conveniently located at Singer Bus Stop, Sango-Ota — easily accessible from major routes in Ogun State.</p>
-      <div class="address-block">
-        <strong style="color:var(--gold);">Glorious Scholars Academy</strong><br/>
-        24/26, Ijaliye, Ewupe Road<br/>
-        Singer Bus Stop, Sango<br/>
-        Ogun State, Nigeria
-      </div>
-      <div style="margin-top:20px;">
-        <a href="https://maps.google.com?q=Singer+Bus+Stop+Sango+Ogun+State" target="_blank" class="btn-primary" style="display:inline-block;margin-top:4px;">
-          Open in Google Maps →
-        </a>
-      </div>
-      <div style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);">
-        <p style="font-size:13px;color:#666;margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;font-weight:800;">Quick Contact</p>
-        <a href="https://wa.me/2348026944961" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:800;font-size:14px;">
-          💬 WhatsApp Us
-        </a>
-      </div>
+    <div class="contact-grid">
+        <div class="reveal">
+            <div class="contact-item"><div class="contact-icon">📍</div><div><h4>Address</h4><p>24/26, Ijaliye, Ewupe Road, Singer Bus Stop, Sango, Ogun State</p></div></div>
+            <div class="contact-item"><div class="contact-icon">📞</div><div><h4>Phone Numbers</h4><a href="tel:08026944961" style="color:#aaa;">08026944961</a><br/><a href="tel:08132899821" style="color:#aaa;">08132899821</a><br/><a href="tel:08130271623" style="color:#aaa;">08130271623</a></div></div>
+            <div class="contact-item"><div class="contact-icon">✉️</div><div><h4>Email</h4><a href="mailto:gloriousscholarsacademy@yahoo.com" style="color:#aaa;">gloriousscholarsacademy@yahoo.com</a><br/><a href="mailto:gloriousscholars@gmail.com" style="color:#aaa;">gloriousscholars@gmail.com</a></div></div>
+            <div class="contact-item"><div class="contact-icon">🕐</div><div><h4>School Hours</h4><p>Monday – Friday: 7:30am – 3:30pm</p></div></div>
+            <div class="social-row" style="display:flex; gap:12px; margin-top:24px;">
+                <a href="https://facebook.com" target="_blank" style="background:rgba(255,255,255,0.1); padding:10px 18px; border-radius:8px; color:white; text-decoration:none;">📘 Facebook</a>
+                <a href="https://instagram.com" target="_blank" style="background:rgba(255,255,255,0.1); padding:10px 18px; border-radius:8px; color:white; text-decoration:none;">📸 Instagram</a>
+                <a href="https://tiktok.com" target="_blank" style="background:rgba(255,255,255,0.1); padding:10px 18px; border-radius:8px; color:white; text-decoration:none;">🎵 TikTok</a>
+            </div>
+        </div>
+        <div class="reveal" style="background:rgba(255,255,255,0.05); border-radius:24px; padding:32px;">
+            <h3 style="color:var(--gold); margin-bottom:16px;">📍 Find Us</h3>
+            <p>Conveniently located at Singer Bus Stop, Sango-Ota.</p>
+            <div style="margin-top:24px; padding:20px; background:rgba(255,255,255,0.05); border-radius:12px;">
+                <strong>Glorious Scholars Academy</strong><br/>
+                24/26, Ijaliye, Ewupe Road, Singer Bus Stop, Sango, Ogun State
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="btn-primary" style="display:inline-block; margin-top:24px;">Open in Google Maps →</a>
+            <a href="https://wa.me/2348026944961" target="_blank" style="display:inline-flex; margin-left:12px; margin-top:24px; background:#25D366; padding:12px 24px; border-radius:40px; color:white; text-decoration:none; font-weight:800;">💬 WhatsApp Us</a>
+        </div>
     </div>
-  </div>
 </section>
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer>
-  <p>
-    <strong>Glorious Scholars Academy</strong> · "Shaping Lives" · Est. 2009<br/>
-    24/26 Ijaliye, Ewupe Road, Singer Bus Stop, Sango, Ogun State<br/>
-    <a href="tel:08026944961" style="color:var(--red);text-decoration:none;">08026944961</a> &nbsp;|&nbsp;
-    <a href="mailto:gloriousscholars@gmail.com" style="color:var(--red);text-decoration:none;">gloriousscholars@gmail.com</a>
-  </p>
-  <p style="margin-top:12px;font-size:12px;color:#444;">
-    © <span id="yr"></span> Glorious Scholars Academy. All Rights Reserved.
-  </p>
+    <p><strong>Glorious Scholars Academy</strong> · "Shaping Lives" · Est. 2009<br/>24/26 Ijaliye, Ewupe Road, Singer Bus Stop, Sango, Ogun State</p>
+    <p style="margin-top:12px;">© <span id="yr"></span> Glorious Scholars Academy. All Rights Reserved.</p>
 </footer>
 
 <script>
-  document.getElementById('yr').textContent = new Date().getFullYear();
+    document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+
+    // Logo auto-detection from root folder
+    function attemptLoadLogo() {
+        const logoPaths = ['logo.png', 'logo.jpg', 'logo.jpeg', 'Logo.png'];
+        const logoContainer = document.querySelector('#logoContainer .logo-placeholder');
+        const heroLogoArea = document.querySelector('#heroLogoPlace');
+        function setLogoImage(src, container) {
+            if (container && container.parentElement) {
+                const img = document.createElement('img');
+                img.src = src;
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                img.style.borderRadius = '50%';
+                container.innerHTML = '';
+                container.appendChild(img);
+            }
+        }
+        for (let p of logoPaths) {
+            fetch(p, { method: 'HEAD', cache: 'no-store' }).then(res => {
+                if (res.ok && logoContainer) {
+                    setLogoImage(p, logoContainer);
+                    if (heroLogoArea) setLogoImage(p, heroLogoArea);
+                }
+            }).catch(() => {});
+        }
+    }
+    attemptLoadLogo();
+
+    // Mobile hamburger
+    const hamburger = document.getElementById('hamburgerBtn');
+    const navLinks = document.querySelector('.nav-links');
+    const navCta = document.querySelector('.nav-cta');
+    if (hamburger) {
+        hamburger.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = '';
+                if (navCta) navCta.style.display = '';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '80px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.backgroundColor = 'white';
+                navLinks.style.padding = '20px';
+                navLinks.style.gap = '20px';
+                navLinks.style.zIndex = '99';
+                if (navCta) navCta.style.display = 'block';
+            }
+        });
+    }
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && navLinks) {
+            navLinks.style.display = '';
+            navLinks.style.position = '';
+            if (navCta) navCta.style.display = '';
+        }
     });
-  }, { threshold: 0.1 });
-  reveals.forEach(el => observer.observe(el));
+
+    // Gallery button
+    document.getElementById('viewMoreGalleryBtn')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert("📸 Full gallery coming soon! More photos of GSA events, classrooms, and competitions will be displayed.");
+    });
 </script>
 </body>
 </html>
