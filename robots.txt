@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /private/
-Sitemap: https://eaglescitadel.acad.com.ng/sitemap.xml
+Sitemap: https://gloriousscholars.acad.com.ng/sitemap.xml
