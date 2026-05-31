@@ -14,7 +14,8 @@
     <meta name="robots" content="index, follow">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
@@ -28,7 +29,8 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About Glorious Scholars Academy">
-    <meta name="twitter:description" content="Shaping lives through academic excellence, discipline, and faith since 2009.">
+    <meta name="twitter:description"
+        content="Shaping lives through academic excellence, discipline, and faith since 2009.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://gloriousscholars.acad.com.ng/about.html">
@@ -52,9 +54,11 @@
     </script>
 
     <!-- Fonts & Styles -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700;800&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         * {
             margin: 0;
@@ -77,8 +81,8 @@
             --text-muted: #5A5A6E;
             --border: #E0DDD2;
             --radius: 20px;
-            --shadow-sm: 0 8px 20px rgba(0,0,0,0.05);
-            --shadow-md: 0 20px 35px -12px rgba(0,0,0,0.08);
+            --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
             --transition: all 0.3s ease;
         }
 
@@ -90,7 +94,12 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, .logo-name, .hero-title, .section-title {
+        h1,
+        h2,
+        h3,
+        .logo-name,
+        .hero-title,
+        .section-title {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 700;
         }
@@ -104,11 +113,12 @@
         /* Topbar */
         .topbar {
             background: var(--navy-dark);
-            color: rgba(255,255,255,0.85);
+            color: rgba(255, 255, 255, 0.85);
             font-size: 0.85rem;
             padding: 10px 0;
-            border-bottom: 1px solid rgba(255,215,0,0.2);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.2);
         }
+
         .topbar-inner {
             display: flex;
             justify-content: space-between;
@@ -116,18 +126,28 @@
             gap: 12px;
             align-items: center;
         }
-        .topbar-left, .topbar-right {
+
+        .topbar-left,
+        .topbar-right {
             display: flex;
             gap: 24px;
             flex-wrap: wrap;
         }
+
         .topbar a {
-            color: rgba(255,255,255,0.85);
+            color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
             transition: var(--transition);
         }
-        .topbar a:hover { color: var(--gold); }
-        .topbar i { margin-right: 8px; color: var(--gold); }
+
+        .topbar a:hover {
+            color: var(--gold);
+        }
+
+        .topbar i {
+            margin-right: 8px;
+            color: var(--gold);
+        }
 
         /* Header */
         .header {
@@ -135,13 +155,15 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.02);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
             transition: var(--transition);
         }
+
         .header.scrolled {
             box-shadow: var(--shadow-sm);
-            background: rgba(255,255,255,0.98);
+            background: rgba(255, 255, 255, 0.98);
         }
+
         .nav-wrapper {
             display: flex;
             justify-content: space-between;
@@ -150,12 +172,14 @@
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
         }
+
         .logo-icon {
             background: var(--gold);
             width: 48px;
@@ -167,6 +191,7 @@
             font-size: 26px;
             color: var(--navy);
         }
+
         .logo-text .logo-name {
             font-size: 1.6rem;
             font-weight: 800;
@@ -174,17 +199,20 @@
             letter-spacing: -0.5px;
             line-height: 1.2;
         }
+
         .logo-motto {
             font-size: 0.75rem;
             letter-spacing: 1px;
             color: var(--gold);
             font-weight: 500;
         }
+
         .nav {
             display: flex;
             gap: 32px;
             align-items: center;
         }
+
         .nav-link {
             text-decoration: none;
             font-weight: 500;
@@ -192,7 +220,12 @@
             transition: var(--transition);
             font-size: 1rem;
         }
-        .nav-link:hover, .nav-link.active { color: var(--gold); }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--gold);
+        }
+
         .nav-apply {
             background: var(--gold);
             padding: 10px 22px;
@@ -200,10 +233,12 @@
             color: var(--navy-dark);
             font-weight: 700;
         }
+
         .nav-apply:hover {
             background: var(--gold-dark);
             color: white;
         }
+
         .hamburger {
             display: none;
             flex-direction: column;
@@ -212,6 +247,7 @@
             border: none;
             cursor: pointer;
         }
+
         .hamburger span {
             width: 28px;
             height: 2px;
@@ -228,6 +264,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .page-banner::before {
             content: '';
             position: absolute;
@@ -238,10 +275,12 @@
             background: url('https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=1600&q=80') center/cover no-repeat;
             opacity: 0.08;
         }
+
         .page-banner-content {
             position: relative;
             z-index: 2;
         }
+
         .page-banner-label {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -249,24 +288,29 @@
             color: var(--gold);
             margin-bottom: 16px;
         }
+
         .page-banner h1 {
             font-size: 3.8rem;
             font-weight: 800;
             margin-bottom: 16px;
         }
+
         .page-banner p {
             font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto 24px;
             opacity: 0.9;
         }
+
         .breadcrumb {
             font-size: 0.85rem;
         }
+
         .breadcrumb a {
             color: var(--gold);
             text-decoration: none;
         }
+
         .breadcrumb span {
             margin: 0 8px;
             opacity: 0.6;
@@ -276,9 +320,11 @@
         .section {
             padding: 80px 0;
         }
+
         .section-alt {
             background: var(--white);
         }
+
         .section-label {
             font-size: 0.8rem;
             text-transform: uppercase;
@@ -288,12 +334,14 @@
             display: block;
             margin-bottom: 12px;
         }
+
         .section-title {
             font-size: 2.8rem;
             font-weight: 700;
             color: var(--navy);
             margin-bottom: 20px;
         }
+
         .section-subtitle {
             font-size: 1.1rem;
             color: var(--gray);
@@ -308,17 +356,20 @@
             gap: 50px;
             align-items: center;
         }
+
         .about-img-wrap {
             position: relative;
             border-radius: 28px;
             overflow: hidden;
             box-shadow: var(--shadow-md);
         }
+
         .about-img-wrap img {
             width: 100%;
             height: auto;
             display: block;
         }
+
         .about-img-badge {
             position: absolute;
             bottom: 20px;
@@ -330,12 +381,14 @@
             color: var(--navy);
             font-weight: bold;
         }
+
         .badge-num {
             font-size: 1.5rem;
             font-weight: 800;
             display: block;
             line-height: 1;
         }
+
         .badge-text {
             font-size: 0.7rem;
             letter-spacing: 1px;
@@ -347,6 +400,7 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 32px;
         }
+
         .mv-card {
             background: var(--cream);
             border-radius: 28px;
@@ -354,10 +408,12 @@
             border: 1px solid var(--border);
             transition: var(--transition);
         }
+
         .mv-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-md);
         }
+
         .mv-icon-wrap {
             width: 70px;
             height: 70px;
@@ -369,21 +425,25 @@
             font-size: 2.5rem;
             margin-bottom: 24px;
         }
+
         .mv-title {
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--navy);
             margin-bottom: 16px;
         }
+
         .mv-text {
             color: var(--text-muted);
             line-height: 1.7;
             font-size: 0.95rem;
         }
+
         .mv-list {
             list-style: none;
             padding: 0;
         }
+
         .mv-list li {
             padding-left: 24px;
             position: relative;
@@ -392,6 +452,7 @@
             font-size: 0.95rem;
             line-height: 1.5;
         }
+
         .mv-list li::before {
             content: '✦';
             position: absolute;
@@ -405,6 +466,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 24px;
         }
+
         .pillar-card {
             background: var(--navy);
             border-radius: 24px;
@@ -412,9 +474,11 @@
             transition: var(--transition);
             cursor: pointer;
         }
+
         .pillar-card:hover {
             transform: translateY(-8px);
         }
+
         .pillar-num {
             font-size: 3rem;
             font-weight: 800;
@@ -422,15 +486,18 @@
             line-height: 1;
             margin-bottom: 16px;
         }
+
         .pillar-icon {
             font-size: 2.5rem;
             margin-bottom: 16px;
         }
+
         .pillar-title {
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 12px;
         }
+
         .pillar-text {
             font-size: 0.85rem;
             line-height: 1.6;
@@ -444,6 +511,7 @@
             gap: 30px;
             margin-top: 20px;
         }
+
         .leader-card {
             background: white;
             border-radius: 24px;
@@ -452,10 +520,12 @@
             transition: var(--transition);
             border: 1px solid var(--border);
         }
+
         .leader-card:hover {
             transform: translateY(-6px);
             box-shadow: var(--shadow-md);
         }
+
         .leader-img {
             height: 280px;
             background: linear-gradient(135deg, var(--navy-light), var(--navy));
@@ -464,6 +534,7 @@
             justify-content: center;
             overflow: hidden;
         }
+
         .leader-img img {
             width: 100%;
             height: 100%;
@@ -471,24 +542,29 @@
             object-position: center top;
             transition: transform 0.4s ease;
         }
+
         .leader-card:hover .leader-img img {
             transform: scale(1.05);
         }
+
         .leader-info {
             padding: 24px;
         }
+
         .leader-name {
             font-size: 1.4rem;
             font-weight: 700;
             color: var(--navy);
             margin-bottom: 6px;
         }
+
         .leader-title {
             color: var(--gold);
             font-weight: 600;
             margin-bottom: 12px;
             font-size: 0.9rem;
         }
+
         .leader-bio {
             font-size: 0.85rem;
             color: var(--gray);
@@ -501,6 +577,7 @@
             padding: 40px 0;
             border-bottom: 1px solid var(--border);
         }
+
         .stats-inner {
             display: flex;
             justify-content: space-between;
@@ -508,6 +585,7 @@
             gap: 28px;
             text-align: center;
         }
+
         .stat-number {
             font-size: 2.5rem;
             font-weight: 800;
@@ -515,6 +593,7 @@
             color: var(--gold);
             display: block;
         }
+
         .stat-label {
             font-size: 0.9rem;
             color: var(--gray);
@@ -529,6 +608,7 @@
             border-radius: 40px;
             margin: 40px auto;
         }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -540,11 +620,13 @@
             transition: var(--transition);
             font-size: 0.9rem;
         }
+
         .btn-outline-white {
-            border: 2px solid rgba(255,255,255,0.6);
+            border: 2px solid rgba(255, 255, 255, 0.6);
             color: white;
             background: transparent;
         }
+
         .btn-outline-white:hover {
             background: white;
             color: var(--navy);
@@ -554,41 +636,48 @@
         /* Footer */
         .footer {
             background: var(--navy-dark);
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
             padding: 60px 0 30px;
             margin-top: 40px;
         }
+
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 40px;
         }
+
         .footer-logo-wrap {
             display: flex;
             align-items: center;
             gap: 12px;
             margin-bottom: 20px;
         }
+
         .footer-logo-name {
             font-size: 1.4rem;
             font-weight: 800;
             color: white;
         }
+
         .footer-motto-txt {
             color: var(--gold);
             font-size: 0.75rem;
         }
+
         .footer-desc {
             font-size: 0.85rem;
             margin-bottom: 20px;
             line-height: 1.6;
         }
+
         .footer-social {
             display: flex;
             gap: 16px;
         }
+
         .footer-social-link {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             width: 38px;
             height: 38px;
             border-radius: 50%;
@@ -598,31 +687,38 @@
             color: white;
             transition: var(--transition);
         }
+
         .footer-social-link:hover {
             background: var(--gold);
             color: var(--navy);
         }
+
         .footer-heading {
             color: white;
             margin-bottom: 20px;
             font-size: 1.2rem;
         }
+
         .footer-links {
             list-style: none;
         }
+
         .footer-links li {
             margin-bottom: 12px;
         }
+
         .footer-links a {
-            color: rgba(255,255,255,0.7);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: var(--transition);
         }
+
         .footer-links a:hover {
             color: var(--gold);
         }
+
         .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             margin-top: 40px;
             padding-top: 24px;
             text-align: center;
@@ -631,20 +727,65 @@
 
         /* Responsive */
         @media (max-width: 900px) {
-            .nav { display: none; flex-direction: column; background: white; position: absolute; top: 80px; left: 0; width: 100%; padding: 24px; gap: 20px; box-shadow: 0 20px 30px rgba(0,0,0,0.1);}
-            .nav.open { display: flex; }
-            .hamburger { display: flex; }
-            .about-intro, .mv-grid { grid-template-columns: 1fr; }
-            .pillars-grid { grid-template-columns: repeat(2, 1fr); }
-            .page-banner h1 { font-size: 2.5rem; }
-            .section-title { font-size: 2rem; }
-            .container { padding: 0 24px; }
+            .nav {
+                display: none;
+                flex-direction: column;
+                background: white;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                padding: 24px;
+                gap: 20px;
+                box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav.open {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .about-intro,
+            .mv-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pillars-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .page-banner h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .container {
+                padding: 0 24px;
+            }
         }
+
         @media (max-width: 600px) {
-            .pillars-grid { grid-template-columns: 1fr; }
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
         }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s ease; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
@@ -659,7 +800,8 @@
                     <span><i class="fas fa-phone-alt"></i><a href="tel:08130271623">0813 027 1623</a></span>
                 </div>
                 <div class="topbar-right">
-                    <span><i class="fas fa-envelope"></i><a href="mailto:gloriousscholarsacademy@yahoo.com">gloriousscholarsacademy@yahoo.com</a></span>
+                    <span><i class="fas fa-envelope"></i><a
+                            href="mailto:gloriousscholarsacademy@yahoo.com">gloriousscholarsacademy@yahoo.com</a></span>
                     <span><i class="fas fa-calendar-alt"></i>Admissions Open 2026/2027</span>
                 </div>
             </div>
@@ -670,8 +812,9 @@
         <div class="nav-wrapper">
             <a href="index.html" class="logo">
                 <div class="logo-icon">
-    <img src="images/logo.png" alt="Glorious Scholars Academy Logo" style="width: 48px; height: 48px; object-fit: contain; border-radius: 50%;">
-</div>
+                    <img src="images/logo.png" alt="Glorious Scholars Academy Logo"
+                        style="width: 48px; height: 48px; object-fit: contain; border-radius: 50%;">
+                </div>
                 <div class="logo-text">
                     <div class="logo-name">Glorious Scholars</div>
                     <div class="logo-motto">Shaping lives</div>
@@ -691,7 +834,8 @@
         <div class="container page-banner-content">
             <div class="page-banner-label">Glorious Scholars Academy</div>
             <h1>About Our School</h1>
-            <p>Discover our journey, our values, and our unwavering commitment to shaping lives through excellence, discipline, and faith.</p>
+            <p>Discover our journey, our values, and our unwavering commitment to shaping lives through excellence,
+                discipline, and faith.</p>
             <div class="breadcrumb">
                 <a href="index.html">Home</a>
                 <span>/</span>
@@ -713,12 +857,34 @@
                 <div>
                     <span class="section-label">Our Story</span>
                     <h2 class="section-title">Glorious Scholars Academy<br>Shaping Lives Since 2009</h2>
-                    <p style="color:var(--text-muted); line-height:1.8; margin-bottom:1.25rem;">Founded in 2009, Glorious Scholars Academy was established with a divine mandate to raise a generation of leaders who would excel academically, stand firm in character, and shine as lights in their generation.</p>
-                    <p style="color:var(--text-muted); line-height:1.8; margin-bottom:1.5rem;">Located at 24/26 Ijaliye, Ewupe Road, Sango, Ogun State, our academy has grown from a small nursery to a full-fledged institution offering Creche through Senior Secondary education. We take pride in our track record of excellence in JET competitions, inter-school sports, mathematics tournaments, and national examinations.</p>
+                    <p style="color:var(--text-muted); line-height:1.8; margin-bottom:1.25rem;">Founded in 2009,
+                        Glorious Scholars Academy was established with a divine mandate to raise a generation of leaders
+                        who would excel academically, stand firm in character, and shine as lights in their generation.
+                    </p>
+                    <p style="color:var(--text-muted); line-height:1.8; margin-bottom:1.5rem;">Located at 24/26 Ijaliye,
+                        Ewupe Road, Sango, Ogun State, our academy has grown from a small nursery to a full-fledged
+                        institution offering Creche through Senior Secondary education. We take pride in our track
+                        record of excellence in JET competitions, inter-school sports, mathematics tournaments, and
+                        national examinations.</p>
                     <div style="display:flex; gap:2rem; flex-wrap:wrap;">
-                        <div><div style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:800; color:var(--gold);">15+</div><div style="font-size:0.8rem; color:var(--gray);">Years of Excellence</div></div>
-                        <div><div style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:800; color:var(--gold);">6+</div><div style="font-size:0.8rem; color:var(--gray);">Academic Levels</div></div>
-                        <div><div style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:800; color:var(--gold);">20+</div><div style="font-size:0.8rem; color:var(--gray);">Awards & Recognitions</div></div>
+                        <div>
+                            <div
+                                style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:800; color:var(--gold);">
+                                15+</div>
+                            <div style="font-size:0.8rem; color:var(--gray);">Years of Excellence</div>
+                        </div>
+                        <div>
+                            <div
+                                style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:800; color:var(--gold);">
+                                6+</div>
+                            <div style="font-size:0.8rem; color:var(--gray);">Academic Levels</div>
+                        </div>
+                        <div>
+                            <div
+                                style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:800; color:var(--gold);">
+                                20+</div>
+                            <div style="font-size:0.8rem; color:var(--gray);">Awards & Recognitions</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -729,12 +895,15 @@
         <div class="container">
             <span class="section-label">Our Purpose</span>
             <h2 class="section-title">Mission &amp; Vision</h2>
-            <p class="section-subtitle">Guided by faith, driven by excellence — our compass for shaping future leaders.</p>
+            <p class="section-subtitle">Guided by faith, driven by excellence — our compass for shaping future leaders.
+            </p>
             <div class="mv-grid reveal">
                 <div class="mv-card">
                     <div class="mv-icon-wrap">🎯</div>
                     <h3 class="mv-title">Our Mission</h3>
-                    <p class="mv-text">To raise god-fearing, disciplined, and academically excellent leaders who will shape their generation through quality education, modern technology, and character development — producing scholars who are confident, creative, and compassionate.</p>
+                    <p class="mv-text">To raise god-fearing, disciplined, and academically excellent leaders who will
+                        shape their generation through quality education, modern technology, and character development —
+                        producing scholars who are confident, creative, and compassionate.</p>
                 </div>
                 <div class="mv-card">
                     <div class="mv-icon-wrap">🌟</div>
@@ -755,13 +924,43 @@
         <div class="container">
             <span class="section-label">Core Commitments</span>
             <h2 class="section-title">The Pillars of Excellence</h2>
-            <p class="section-subtitle">Five foundational principles that define everything we do at Glorious Scholars Academy.</p>
+            <p class="section-subtitle">Five foundational principles that define everything we do at Glorious Scholars
+                Academy.</p>
             <div class="pillars-grid reveal">
-                <div class="pillar-card" style="background: linear-gradient(135deg, var(--gold-dark), var(--gold));"><div class="pillar-num">01</div><div class="pillar-icon">📚</div><h3 class="pillar-title">Excellent Academics</h3><p class="pillar-text">Consistent outstanding performance in national exams, JET competitions, and inter-school contests.</p></div>
-                <div class="pillar-card" style="background: linear-gradient(135deg, var(--gold-dark), var(--gold));"><div class="pillar-num">02</div><div class="pillar-icon">🙏</div><h3 class="pillar-title">Godly Foundation</h3><p class="pillar-text">Building character on biblical principles, prayer, and moral integrity.</p></div>
-                <div class="pillar-card" style="background: linear-gradient(135deg, var(--gold-dark), var(--gold));"><div class="pillar-num">03</div><div class="pillar-icon">💻</div><h3 class="pillar-title">ICT & Modern Tech</h3><p class="pillar-text">Smart classrooms, computer literacy, and 21st-century teaching methodologies.</p></div>
-                <div class="pillar-card" style="background: linear-gradient(135deg, var(--gold), var(--gold-dark));"><div class="pillar-num">04</div><div class="pillar-icon">⚖️</div><h3 class="pillar-title">High Discipline</h3><p class="pillar-text">Structured environment that fosters respect, responsibility, and self-control.</p></div>
-                <div class="pillar-card" style="background: linear-gradient(135deg, var(--gold-dark), var(--gold));"><div class="pillar-num">05</div><div class="pillar-icon">🎭</div><h3 class="pillar-title">Character Building</h3><p class="pillar-text">Leadership, empathy, and resilience through clubs, sports, and mentorship programs.</p></div>
+                <div class="pillar-card" style="background: linear-gradient(135deg, var(--gold-dark), var(--gold));">
+                    <div class="pillar-num">01</div>
+                    <div class="pillar-icon">📚</div>
+                    <h3 class="pillar-title">Excellent Academics</h3>
+                    <p class="pillar-text">Consistent outstanding performance in national exams, JET competitions, and
+                        inter-school contests.</p>
+                </div>
+                <div class="pillar-card" style="background: linear-gradient(135deg, var(--gold-dark), var(--gold));">
+                    <div class="pillar-num">02</div>
+                    <div class="pillar-icon">🙏</div>
+                    <h3 class="pillar-title">Godly Foundation</h3>
+                    <p class="pillar-text">Building character on biblical principles, prayer, and moral integrity.</p>
+                </div>
+                <div class="pillar-card" style="background: linear-gradient(135deg, var(--gold-dark), var(--gold));">
+                    <div class="pillar-num">03</div>
+                    <div class="pillar-icon">💻</div>
+                    <h3 class="pillar-title">ICT & Modern Tech</h3>
+                    <p class="pillar-text">Smart classrooms, computer literacy, and 21st-century teaching methodologies.
+                    </p>
+                </div>
+                <div class="pillar-card" style="background: linear-gradient(135deg, var(--gold), var(--gold-dark));">
+                    <div class="pillar-num">04</div>
+                    <div class="pillar-icon">⚖️</div>
+                    <h3 class="pillar-title">High Discipline</h3>
+                    <p class="pillar-text">Structured environment that fosters respect, responsibility, and
+                        self-control.</p>
+                </div>
+                <div class="pillar-card" style="background: linear-gradient(135deg, var(--gold-dark), var(--gold));">
+                    <div class="pillar-num">05</div>
+                    <div class="pillar-icon">🎭</div>
+                    <h3 class="pillar-title">Character Building</h3>
+                    <p class="pillar-text">Leadership, empathy, and resilience through clubs, sports, and mentorship
+                        programs.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -773,18 +972,36 @@
             <div class="leaders-grid reveal">
                 <div class="leader-card">
                     <div class="leader-img"><img src="images/mary-afere.png" alt="Founder"></div>
-                    <div class="leader-info"><h3 class="leader-name">Pastor (Mrs) Mary Olufunmilayo Afere</h3><div class="leader-title">Founder</div><p class="leader-bio">Visionary educator and servant leader with over 20 years of experience in Christian education. Passionate about raising a generation of godly scholars who excel in all spheres of life.</p></div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">Pastor (Mrs) Mary Olufunmilayo Afere</h3>
+                        <div class="leader-title">Founder</div>
+                        <p class="leader-bio">Visionary educator and servant leader with over 40 years of experience in
+                            Christian education. Passionate about raising a generation of godly scholars who excel in
+                            all spheres of life.</p>
+                    </div>
                 </div>
                 <div class="leader-card">
                     <div class="leader-img"><img src="images/morenike-adebiyi.png" alt="Principal"></div>
-                    <div class="leader-info"><h3 class="leader-name">Mrs Morenike Adebiyi</h3><div class="leader-title">Principal</div><p class="leader-bio">Educational administrator dedicated to academic excellence and staff development. Oversees holistic student growth and curriculum delivery with precision and care.</p></div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">Mrs Morenike Adebiyi</h3>
+                        <div class="leader-title">Principal</div>
+                        <p class="leader-bio">Educational administrator dedicated to academic excellence and staff
+                            development. Oversees holistic student growth and curriculum delivery with precision and
+                            care.</p>
+                    </div>
                 </div>
                 <div class="leader-card">
                     <div class="leader-img"><img src="images/olanrewaju-dotun.png" alt="Vice Principal"></div>
-                    <div class="leader-info"><h3 class="leader-name">Mr Olanrewaju Dotun</h3><div class="leader-title">Vice Principal</div><p class="leader-bio">Discipline, student affairs, and extracurriculars expert. Promotes a culture of excellence in sports, clubs, and character formation.</p></div>
+                    <div class="leader-info">
+                        <h3 class="leader-name">Mr Olanrewaju Dotun</h3>
+                        <div class="leader-title">Vice Principal</div>
+                        <p class="leader-bio">Discipline, student affairs, and extracurriculars expert. Promotes a
+                            culture of excellence in sports, clubs, and character formation.</p>
+                    </div>
                 </div>
             </div>
-            <p style="text-align: center; margin-top: 32px; color: var(--gray); font-size: 0.85rem;">* Click on any profile image to replace with actual photo</p>
+            <p style="text-align: center; margin-top: 32px; color: var(--gray); font-size: 0.85rem;">* Click on any
+                profile image to replace with actual photo</p>
         </div>
     </section>
 
@@ -803,19 +1020,58 @@
         <div class="cta-banner">
             <h2>Join the Glorious Scholars Family</h2>
             <p>Admissions open for 2026/2027 — from Creche to Senior Secondary. Enroll your child today.</p>
-            <a href="#" class="btn btn-outline-white" style="background:white; color:var(--navy);">Apply for Admission <i class="fas fa-arrow-right"></i></a>
+            <a href="#" class="btn btn-outline-white" style="background:white; color:var(--navy);">Apply for Admission
+                <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div><div class="footer-logo-wrap"><div class="logo-icon"><i class="fas fa-graduation-cap"></i></div><div><div class="footer-logo-name">Glorious Scholars</div><div class="footer-motto-txt">Shaping lives</div></div></div><p class="footer-desc">Excellence · Discipline · Godliness · Innovation · Character</p><div class="footer-social"><a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a><a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a><a href="#" class="footer-social-link"><i class="fab fa-tiktok"></i></a></div></div>
-                <div><h3 class="footer-heading">Quick Links</h3><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="#">Admissions</a></li><li><a href="#">Portal</a></li></ul></div>
-                <div><h3 class="footer-heading">Programmes</h3><ul class="footer-links"><li>Crèche / Nursery</li><li>Primary School</li><li>Junior Secondary</li><li>Senior Secondary</li></ul></div>
-                <div><h3 class="footer-heading">Contact</h3><ul class="footer-links"><li><i class="fas fa-map-marker-alt"></i> 24/26 Ijaliye, Ewupe Rd, Sango, Ogun</li><li><i class="fas fa-phone"></i> 0802 694 4961</li><li><i class="fas fa-envelope"></i> gloriousscholarsacademy@yahoo.com</li></ul></div>
+                <div>
+                    <div class="footer-logo-wrap">
+                        <div class="logo-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div>
+                            <div class="footer-logo-name">Glorious Scholars</div>
+                            <div class="footer-motto-txt">Shaping lives</div>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Excellence · Discipline · Godliness · Innovation · Character</p>
+                    <div class="footer-social"><a href="#" class="footer-social-link"><i
+                                class="fab fa-facebook-f"></i></a><a href="#" class="footer-social-link"><i
+                                class="fab fa-instagram"></i></a><a href="#" class="footer-social-link"><i
+                                class="fab fa-tiktok"></i></a></div>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Programmes</h3>
+                    <ul class="footer-links">
+                        <li>Crèche / Nursery</li>
+                        <li>Primary School</li>
+                        <li>Junior Secondary</li>
+                        <li>Senior Secondary</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 24/26 Ijaliye, Ewupe Rd, Sango, Ogun</li>
+                        <li><i class="fas fa-phone"></i> 0802 694 4961</li>
+                        <li><i class="fas fa-envelope"></i> gloriousscholarsacademy@yahoo.com</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-bottom"><p>&copy; 2025 Glorious Scholars Academy. Shaping lives since 2009.</p></div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Glorious Scholars Academy. Shaping lives since 2009.</p>
+            </div>
         </div>
     </footer>
 
