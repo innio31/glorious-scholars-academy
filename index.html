@@ -3,17 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glorious Scholars Academy</title>
+  <title>School Website</title>
   <style>
-    body { margin: 0; overflow: hidden; height: 100vh; }
-    iframe { 
-      width: 100%; 
-      height: 100vh; 
-      border: none; 
+    body { margin: 0; overflow: hidden; height: 100vh; font-family: sans-serif; }
+    iframe { width: 100%; height: 100vh; border: none; }
+    #fallback {
+      display: none;
+      position: absolute; inset: 0;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 30px;
+      background: #f8f9fa; color: #333;
     }
+    #fallback h1 { font-size: 1.2rem; margin-bottom: 8px; }
+    #fallback p { font-size: 0.9rem; color: #666; }
   </style>
 </head>
 <body>
-  <iframe src="https://acad.com.ng/web/gloriousscholars/"></iframe>
+  <div id="fallback">
+    <div>
+      <h1>Website temporarily unavailable</h1>
+      <p>This school's website subscription is not active. Please check back later or contact the school.</p>
+    </div>
+  </div>
+  <iframe id="site" src="https://acad.com.ng/web/gsa/"></iframe>
+  <script>
+    // After 6 seconds, if the API hasn't loaded anything, show the fallback.
+    // (Simple heuristic — for a definitive check, add a POST message
+    // handshake between the inner site and this wrapper.)
+    setTimeout(() => {
+      document.getElementById('fallback').style.display = 'flex';
+    }, 6000);
+  </script>
 </body>
 </html>
